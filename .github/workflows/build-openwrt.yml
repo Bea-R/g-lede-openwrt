@@ -86,10 +86,10 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
 
-    #- name: SSH connection to Actions
-    #  uses: P3TERX/debugger-action@master
-    - name: GitHub Action for Cloudflare Workers
-      uses: cloudflare/serverless-action@v1.1
+    - name: SSH connection to Actions
+      uses: P3TERX/debugger-action@master
+    #- name: GitHub Action for Cloudflare Workers
+    #  uses: cloudflare/serverless-action@v1.1
 
       if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'ssh')
 
